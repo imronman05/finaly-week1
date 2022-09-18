@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Project</title>
+</head>
+<body>
+    <!-- Awal Nav -->
+    <nav>
+        <div class="container-logo">
+            <img src="../assets/gambar/brandred.png" alt="logo Dumbways">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" class="active">My Project</a></li>
+            </ul>
+        </div>
+        <div class="button-kontak">
+            <a href="../contact/kontak.html">Contact Me</a>
+        </div>
+    </nav>
+    <!-- Akhir nav -->
+<main>
+        <!-- Awal Form kontak -->
+    <div class="container-form">    
+        <h1>ADD MY PROJECT</h1>
+        <form id="button-send">
+            <div>
+                <label for="name">Project Name</label>
+                <input type="text" id="name" name="name"  required>
+            </div>
+            <div class="date">
+                <div class="start-date">
+                    <label for="start-date">Start Date</label>
+                    <input type="datetime-local" id="start-date" name="start-date" required>
+                </div>
+                <div class="end-date">
+                    <label for="end-date">End Date</label>
+                    <input type="datetime-local" id="end-date" name="end-date" required>
+                </div>
+            </div>
+            <div>
+                <label for="message">Description</label>
+                <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="technologies">
+                <p>Technologies</p>
+                <div class="container-tech">
+                    <div class="wrap-tech">
+                        <div>
+                            <input type="checkbox" id="React Js" value="React Js" class="checkbox">
+                            <label for="React Js">React JS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Css" value="Css" class="checkbox">
+                            <label for="Css">Css</label>
+                        </div>
+                    </div>
+                    <div class="wrap-tech">
+                        <div>
+                            <input type="checkbox" id="Javascript" value="Javascript" class="checkbox">
+                            <label for="Javascript">JavaScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="golang" value="golang" class="checkbox">
+                            <label for="golang">Golang</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="">Upload Image</label>
+                <div class="file-image">
+                    <input type="file" id="file" accept="image/*" required>
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+            <div class="form-button">
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="container-blog">
+        <h1>MY PROJECT</h1>
+            <div id="card-blog">
+            </div>
+    </div>
+    <!-- Akhir Form kontak -->
+    <script src="project.js"></script>
+</main>
+</body>
+</html>

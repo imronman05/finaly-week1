@@ -1,0 +1,164 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*Agar suatu box elemen memiliki width dan height tetap dalam ukuran aslinya meski didalam nya ada pading dan border */
+  font-family: sans-serif, serif;
+  text-decoration: none;
+}
+/* Awal Navigasi */
+nav {
+  background-color: #f4f3f3;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 1em rgb(197, 196, 196);
+  padding: 1% 3%;
+}
+.container-logo {
+  display: flex;
+  flex: 70%;
+}
+nav img {
+  width: 7%;
+}
+nav ul {
+  width: 100%;
+  margin-left: 7%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav ul li {
+  margin-right: 5%;
+}
+nav ul li a {
+  color: black;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all ease-in-out 0.5s;
+}
+.active {
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+.button-kontak {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 30%;
+}
+.button-kontak a {
+  padding: 2.5% 6.5%;
+  font-weight: bold;
+  background-color: #111727;
+  border: 1px solid black;
+  color: white;
+  border-radius: 0.5em;
+  font-size: 100%;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.button-kontak a:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+/* Akhir Navigasi */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* % satuan yang dapat berubah seusai dengan ukuran parentnya atau ukuran layar*/
+  padding: 1.1% 2.6%;
+  background-color: rgb(224, 228, 232);
+}
+.container-fluid {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  box-shadow: 0 0 1.1em rgb(197, 196, 196); /*blab*/
+  /* 1em = 16 px 1 em ukurannya akan sama dengan ukuran induk (parent) yang membungkusnya.*/
+  border-radius: 0.5em;
+  background-color: white;
+}
+.wrapp {
+  flex: 60%;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  padding: 0% 3%;
+}
+.wrapp h1 {
+  margin-bottom: 4%;
+}
+.wrapp p {
+  color: rgb(56, 55, 55);
+  text-align: justify; /*untuk membuat text rata kiri dan rata kanan*/
+  line-height: 1.4em; /*Untuk menentukan jarak antar baris perbaris*/
+  margin-bottom: 5%;
+  font-size: 1em;
+}
+.wrapp-cv {
+  display: flex;
+  align-items: center;
+}
+.wrapp button {
+  border-radius: 1em;
+  border: none;
+  background-color: rgb(17, 23, 39);
+  color: white;
+  padding: 1.3% 5%;
+  font-size: 1em;
+  cursor: pointer;
+}
+.wrapp h4 {
+  margin-left: 5%;
+  font-size: 1.2em;
+  font-weight: normal;
+  cursor: pointer; /*merubah cursor(Pointer Mouse) pada saat mouse diarahkan pada tag h4 yang berada didalam dari element yang diberi nama class wrapp*/
+}
+.wrapp h4 i {
+  padding-left: 0.4em;
+}
+.icon {
+  margin-top: 9%;
+  font-size: 1.6em;
+}
+.icon a {
+  padding: 0.18em 0.3em;
+  color: white;
+  background-color: black;
+  text-decoration: none; /*untuk menghilangkan baris yang secara default ada pada tag a*/
+  border-radius: 50%;
+  margin-right: 3%;
+}
+.fa-facebook-f {
+  padding: 0 0.1em;
+}
+.card-image {
+  flex: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrap-image {
+  width: 90%;
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 1em rgb(197, 196, 196);
+}
+.card-image img {
+  border-radius: 10px 10px 0 0;
+}
+.card-image h1 {
+  margin-top: 0.4em;
+  margin-bottom: 0;
+}
+.card-image p {
+  font-size: 1.125m;
+  padding-bottom: 1em;
+  text-align: center;
+}

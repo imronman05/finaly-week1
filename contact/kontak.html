@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="kontak.css">
+</head>
+<body>
+    <!-- Awal nav -->
+    <nav>
+        <div class="container-logo">
+                <img src="../assets/gambar/brandred.png" alt="logo Dumbways">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../my-project/project.html">My Project</a></li>
+                </ul>
+        </div>
+        <div class="button-kontak">
+            <a href="#">Contact Me</a>
+        </div>
+    </nav>
+    <!-- Akhir nav -->
+    <main>
+        <!-- Awal Form kontak -->
+        <h1>GET IN TOUCH</h1>
+        <form>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <select id="subject" required>
+                    <option hidden></option>
+                    <option value="Front End">Front End</option>
+                    <option value="Back End">Back End</option>
+                    <option value="fullstack">Fullstack</option>
+                </select>
+            </div>
+            <div>
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="form-button">
+                <button type="submit" id="button-send">submit</button>
+            </div>
+        </form>
+        <!-- Akhir Form kontak -->
+    </main>
+    <script src="kontak.js"></script>
+</body>
+</html>
