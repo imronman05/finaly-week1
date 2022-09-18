@@ -28,7 +28,7 @@ function addBlog(){
         }
     }
 
-    if(projectName == undefined || startTime == undefined || valuetechnologies.length == 0){
+    if(projectName == " " || startTime == " " || valuetechnologies.length == 0){
         return alert('isikan data form dengan benar');
     }
     
@@ -46,21 +46,20 @@ function addBlog(){
     data.push(obj);
 }
 
-function convers(start,end){    
-    let distance2 = Math.abs(start - end)/1000;
+function convers(start,end){
+    let distance = Math.abs(start - end) / 1000;
     
     const secondInHours = 3600;
     const hoursInDay = 24;
+    const dayInYear = 365;
 
-    let day = Math.floor(distance2 / (secondInHours * hoursInDay));
-    let hours   = Math.floor((distance2 - (day * (secondInHours * hoursInDay)))/secondInHours);
-    let minutes = Math.floor((distance2 - (day * (secondInHours * hoursInDay)) - (hours * secondInHours)) / 60);
-    let seconds = Math.floor(distance2 - (day * (secondInHours * hoursInDay)) - (hours * secondInHours) - (minutes * 60));
-
-    let convertBulan = Math.floor(day % 365);
+    let day = Math.floor(distance / (secondInHours * hoursInDay));
+    let convertBulan = Math.floor(day % dayInYear);
     let bulan = Math.floor(convertBulan / 30);
-    let tahun = Math.floor(day / 365);
-
+    let tahun = Math.floor(day / dayInYear);
+    let hours   = Math.floor((distance - (day * (secondInHours * hoursInDay)))/secondInHours);
+    let minutes = Math.floor((distance - (day * (secondInHours * hoursInDay)) - (hours * secondInHours)) / 60);
+    
     if(tahun > 0){
         return `${tahun} year`;
     }else if(bulan > 0){
@@ -69,13 +68,12 @@ function convers(start,end){
         return `${day} day`
     }else if(hours > 0){
         return `${hours} hours`;
-    }else if(minutes > 0){
+    }else{
         return `${minutes} minutes`;
-    }else {
-        return `${seconds} seconds`;
-    }
-
+    }   
 }
+
+const display = document.getElementById('card-blog');
 
 function displayBlog(nameProject,descProject,imageProject,techProject,conversionDate){
     let  hasil = [];
@@ -99,8 +97,6 @@ function displayBlog(nameProject,descProject,imageProject,techProject,conversion
         }
     }
 
-    const display = document.getElementById('card-blog');
-    
         display.innerHTML += `
         <div class="card" id='card'>
             <div class="card-image">
@@ -119,15 +115,13 @@ function displayBlog(nameProject,descProject,imageProject,techProject,conversion
         </div>
         `        
 }
-    const card = document.getElementById('card-blog');
-        card.addEventListener('click',function(e){
-            let test = this.children;
-            for(let i = 0; i < test.length; i++){
-                test[i].addEventListener('click',function(e){
+        display.addEventListener('click',function(e){
+            let card = this.children;
+            for(let i = 0; i < card.length; i++){
+                card[i].addEventListener('click',function(e){
                     const a = document.createElement('a');
 
                         a.href = `../blog/blog.html`;
-                        // a.target = '_blank';
                         a.click();
                 })
             }

@@ -3,7 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /*Agar suatu box elemen memiliki width dan height tetap dalam ukuran aslinya meski didalam nya ada pading dan border */
+  box-sizing: border-box;
   font-family: sans-serif, serif;
   text-decoration: none;
 }
@@ -70,7 +70,7 @@ nav ul li a:hover {
 .container {
   display: flex;
   justify-content: center;
-  width: 100%; /* % satuan yang dapat berubah seusai dengan ukuran parentnya atau ukuran layar*/
+  width: 100%; 
   padding: 1.1% 2.6%;
   background-color: rgb(224, 228, 232);
 }
@@ -79,8 +79,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: row;
   padding: 3%;
-  box-shadow: 0 0 1.1em rgb(197, 196, 196); /*blab*/
-  /* 1em = 16 px 1 em ukurannya akan sama dengan ukuran induk (parent) yang membungkusnya.*/
+  box-shadow: 0 0 1.1em rgb(197, 196, 196);
   border-radius: 0.5em;
   background-color: white;
 }
@@ -96,8 +95,8 @@ nav ul li a:hover {
 }
 .wrapp p {
   color: rgb(56, 55, 55);
-  text-align: justify; /*untuk membuat text rata kiri dan rata kanan*/
-  line-height: 1.4em; /*Untuk menentukan jarak antar baris perbaris*/
+  text-align: justify;
+  line-height: 1.4em;
   margin-bottom: 5%;
   font-size: 1em;
 }
@@ -118,7 +117,7 @@ nav ul li a:hover {
   margin-left: 5%;
   font-size: 1.2em;
   font-weight: normal;
-  cursor: pointer; /*merubah cursor(Pointer Mouse) pada saat mouse diarahkan pada tag h4 yang berada didalam dari element yang diberi nama class wrapp*/
+  cursor: pointer;
 }
 .wrapp h4 i {
   padding-left: 0.4em;
@@ -131,7 +130,7 @@ nav ul li a:hover {
   padding: 0.18em 0.3em;
   color: white;
   background-color: black;
-  text-decoration: none; /*untuk menghilangkan baris yang secara default ada pada tag a*/
+  text-decoration: none;
   border-radius: 50%;
   margin-right: 3%;
 }
