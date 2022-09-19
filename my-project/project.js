@@ -28,7 +28,7 @@ function addBlog(){
         }
     }
 
-    if(projectName == " " || description == " " || valuetechnologies.length == 0){
+    if(projectName == " " || description == " " || valuetechnologies.length == 0 || conversion == undefined){
         return alert('isikan data form dengan benar');
     }
     
@@ -54,23 +54,25 @@ function convers(start,end){
     const dayInYear = 365;
 
     let day = Math.floor(distance / (secondInHours * hoursInDay));
-    let convertBulan = Math.floor(day % dayInYear);
-    let bulan = Math.floor(convertBulan / 30);
-    let tahun = Math.floor(day / dayInYear);
     let hours   = Math.floor((distance - (day * (secondInHours * hoursInDay)))/secondInHours);
     let minutes = Math.floor((distance - (day * (secondInHours * hoursInDay)) - (hours * secondInHours)) / 60);
+    let convertMonth = Math.floor(day % dayInYear);
+    let month = Math.floor(convertMonth / 30);
+    let year = Math.floor(day / dayInYear);
     
-    if(tahun > 0){
-        return `${tahun} year`;
-    }else if(bulan > 0){
-        return `${bulan} month`;
+    if(year > 0){
+        return `${year} year`;
+    }else if(month > 0){
+        return `${month} month`;
     }else if(day > 0){
         return `${day} day`
     }else if(hours > 0){
         return `${hours} hours`;
-    }else{
+    }else if(minutes > 0){
         return `${minutes} minutes`;
-    }   
+    }else {
+        return
+    }
 }
 
 const display = document.getElementById('card-blog');
