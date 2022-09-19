@@ -192,6 +192,7 @@ form button {
     box-shadow: 0 .3em .6em rgb(175, 175, 175);;
     padding: 1%;
     word-break: break-all;
+    cursor: pointer;
 }
 .card-image{
     width: 21.6em;
