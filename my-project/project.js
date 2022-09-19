@@ -28,7 +28,7 @@ function addBlog(){
         }
     }
 
-    if(projectName == " " || startTime == " " || valuetechnologies.length == 0){
+    if(projectName == " " || description == " " || valuetechnologies.length == 0){
         return alert('isikan data form dengan benar');
     }
     
